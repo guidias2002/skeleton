@@ -1,0 +1,21 @@
+.containerMovie {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    border: 1px solid #ffffff31;
+    border-radius: 5px;
+}
+
+.containerMovie img {
+    border-radius: 5px 5px 0 0;
+}
+
+.description {
+    padding: 10px;
+}
+
+.description p {
+    margin-bottom: 10px;
+}
+
