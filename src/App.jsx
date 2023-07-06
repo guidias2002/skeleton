@@ -1,7 +1,6 @@
-import Loading from './components/Loading';
+import Movies from './components/Movies';
 
 import './App.css';
-import Movies from './components/Movies';
 
 
 function App() {

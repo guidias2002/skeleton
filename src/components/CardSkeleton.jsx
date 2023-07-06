@@ -1,14 +1,18 @@
-import Skeleton from 'react-loading-skeleton'
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 
-export default function CardSkeleton() {
+import './CardSkeleton.css'
+
+export default function CardSkeleton({ cards }) {
   return (
-    <div className='card-skeleton'>
-        <div className=''>
-            <Skeleton width={150} height={200}/>
+    Array(cards)
+    .fill(0)
+    .map((_, i) => (
+      <SkeletonTheme baseColor='#252525' highlightColor="#333" key={i}>
+        <div className='card-skeleton'>
+          <Skeleton width={200} height={300} style={{ marginBottom: '5px' }}/>
+          <Skeleton width={200} height={20}/>
         </div>
-        <div>
-            <Skeleton/>
-        </div>
-    </div>
-  )
+      </SkeletonTheme>
+    ))
+  );
 }

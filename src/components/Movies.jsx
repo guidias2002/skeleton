@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import Loading from './Loading';
 import CardMovie from './CardMovie';
-import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
 import './Movies.css'
@@ -30,13 +28,13 @@ export default function Movies() {
                 }
             }
             getMovie()
-        }, 3000)
+        }, 1000)
     }, [])
 
     return (
         <div className='containerMovies'>
-            {!removeLoading && <Loading />}
             <ul className='listMovies'>
+                {!removeLoading && <CardSkeleton cards={6}/>}
                 {movies.length > 0 && movies.map((movie) => {
                     return (
                         <CardMovie key={movie.id} movie={movie} />
